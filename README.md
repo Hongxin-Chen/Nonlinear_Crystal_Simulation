@@ -22,7 +22,7 @@ This is an optical simulation tool developed using **Python** and **Streamlit**.
    git clone [https://github.com/Hongxin-Chen/Nonlinear_Crystal_Simulation_of_SHG.git](https://github.com/Hongxin-Chen/Nonlinear_Crystal_Simulation_of_SHG.git)
    cd Nonlinear_Crystal_Simulation_of_SHG
 
-2.**Install dependencies**
+2. **Install dependencies**
    
    pip install numpy streamlit plotly scipy pandas
 
