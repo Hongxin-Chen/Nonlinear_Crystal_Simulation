@@ -19,7 +19,7 @@ from matplotlib.ticker import FuncFormatter
 # 页面配置与样式
 # ============================================================================
 st.set_page_config(
-    page_title="非线性晶体SHG模拟 (Chen)",
+    page_title="非线性晶体SHG模拟 V1.0",
     layout="wide"
 )
 
@@ -1011,4 +1011,5 @@ if st.session_state.has_run:
                 with c1: st.pyplot(st.session_state['res_temp_fig'])
                 with c2: 
                     st.warning(f"**温度带宽 (FWHM)**")
+
                     st.metric("°C·cm", f"{st.session_state['res_temp_val_temp']:.4f}")
