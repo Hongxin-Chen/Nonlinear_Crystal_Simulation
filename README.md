@@ -24,7 +24,7 @@ This is an optical simulation tool developed using **Python** and **Streamlit**.
 
 2. **Install dependencies**
    
-   pip install numpy streamlit plotly scipy pandas
+   pip install -r requirements.txt
 
 3. **Run the application**
 
