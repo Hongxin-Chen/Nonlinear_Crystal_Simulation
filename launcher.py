@@ -1440,7 +1440,13 @@ if st.session_state.has_run:
             st.plotly_chart(st.session_state['3d_fig'], use_container_width=True)
             
             # 添加说明
-            st.caption("**说明**: k矢量为波矢方向，S矢量为能量流方向。走离角ρ为了方便展示，夸大了3倍。长方体为晶体示意，端面垂直于k矢量方向。截面椭圆表示垂直于k矢量方向的折射率分布。")
+            st.caption(r"""
+            * **k 矢量 ($\overrightarrow{k}$)**：波矢方向。
+            * **S 矢量 ($\overrightarrow{S}$)**：能量流/光线方向。
+            * **走离角 ($\rho$)**：为了方便展示，视觉上夸大了 3 倍。
+            * **长方体**：晶体几何示意，其端面垂直于 $\overrightarrow{k}$ 方向。
+            * **截面椭圆**：表示垂直于 $\overrightarrow{k}$ 方向的折射率分布。
+            """)
             
             # 显示折射率数值信息
             config = st.session_state['3d_config']
@@ -1921,5 +1927,6 @@ if st.session_state.has_run:
                             st.metric(f"{plane}平面角度带宽", 
                                     f"{acc_ang:.4f} mrad·cm" if not np.isnan(acc_ang) else "N/A")
                             st.caption(f"约 {acc_ang_deg:.4f}°·cm" if not np.isnan(acc_ang_deg) else "")
+
 
 
