@@ -147,7 +147,6 @@ dn_e/dT = (3.31λ² - 2.43λ - 8.40) × 10⁻⁶ (°C⁻¹)
 参考文献：
 Nobuhiro Umemura and Kiyoshi Kato, "Ultraviolet generation tunable to 0.185 µm in CsLiB6O10," Appl. Opt. 36, 6794-6796 (1997)"""
     },
-    },
     
     'KTP': {
         '默认': """KTP (双轴晶体, 福晶科技数据)
@@ -1936,5 +1935,6 @@ if st.session_state.has_run:
                             st.metric(f"{plane}平面角度带宽", 
                                     f"{acc_ang:.4f} mrad·cm" if not np.isnan(acc_ang) else "N/A")
                             st.caption(f"约 {acc_ang_deg:.4f}°·cm" if not np.isnan(acc_ang_deg) else "")
+
 
 
