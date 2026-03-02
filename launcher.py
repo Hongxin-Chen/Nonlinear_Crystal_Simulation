@@ -1608,6 +1608,18 @@ if st.session_state.has_run:
                     if 'res_temp_fig' in st.session_state:
                         st.pyplot(st.session_state['res_temp_fig'])
                         st.metric("温度带宽 (FWHM)", f"{st.session_state['res_temp_val_temp']:.4f} K·cm")
+                
+                st.write("---")
+                st.info(
+                    "💡 **关于带宽单位 ·cm 的说明**\n\n"
+                    "带宽结果的单位带有 **·cm**（例如 mrad·cm、nm·cm、K·cm），表示该值已归一化到 **1 cm 晶体长度**。\n\n"
+                    "实际带宽 = 显示值 ÷ 晶体长度 (cm)\n\n"
+                    "**举例：** 若角度带宽为 **0.4880 mrad·cm**，晶体长度为 **2 cm**，则实际角度带宽为：\n\n"
+                    "  0.4880 ÷ 2 = **0.2440 mrad**\n\n"
+                    "同理，若波长带宽为 **0.1260 nm·cm**，晶体长度为 **0.5 cm**，则实际波长带宽为：\n\n"
+                    "  0.1260 ÷ 0.5 = **0.2520 nm**\n\n"
+                    "晶体越长，带宽越窄；晶体越短，带宽越宽。"
+                )
 
     else:
         # ============================================================================
@@ -1934,4 +1946,16 @@ if st.session_state.has_run:
                             st.metric(f"{plane}平面角度带宽", 
                                     f"{acc_ang:.4f} mrad·cm" if not np.isnan(acc_ang) else "N/A")
                             st.caption(f"约 {acc_ang_deg:.4f}°·cm" if not np.isnan(acc_ang_deg) else "")
+                    
+                    st.write("---")
+                    st.info(
+                        "💡 **关于带宽单位 ·cm 的说明**\n\n"
+                        "带宽结果的单位带有 **·cm**（例如 mrad·cm、nm·cm、K·cm），表示该值已归一化到 **1 cm 晶体长度**。\n\n"
+                        "实际带宽 = 显示值 ÷ 晶体长度 (cm)\n\n"
+                        "**举例：** 若温度带宽为 **5.8000 K·cm**，晶体长度为 **2 cm**，则实际温度带宽为：\n\n"
+                        "  5.8000 ÷ 2 = **2.9000 K**\n\n"
+                        "同理，若波长带宽为 **0.1260 nm·cm**，晶体长度为 **0.5 cm**，则实际波长带宽为：\n\n"
+                        "  0.1260 ÷ 0.5 = **0.2520 nm**\n\n"
+                        "晶体越长，带宽越窄；晶体越短，带宽越宽。"
+                    )
 
